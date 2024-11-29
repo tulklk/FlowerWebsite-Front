@@ -1,0 +1,163 @@
+/* Page and content layout */
+.page-container-sign-up {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content-wrap {
+    flex: 1; 
+  }
+  
+  .signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-image: url('../assets/background-hoa-hong_045205487.jpg');
+   
+  }
+  
+  .signup-form {
+    background-color: #fff; 
+    padding: 40px 40px;
+    border-radius: 20px; 
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); 
+    width: fit-content; 
+    text-align: center;
+    /* margin-top: 10px; */
+  }
+  
+  .signup-form h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .input-group label {
+    font-size: 14px;
+    color: #666;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-container input {
+    width: 100%;
+    max-width: 1000px;
+    /* padding: 12px 15px; */
+    padding-left: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+    color: #666;
+  }
+  
+  .input-container input:focus {
+    border-color: #FFC0CB;
+    outline: none;
+  }
+  .input-container input::placeholder {
+    color: #ccc; /* Make the placeholder text even lighter */
+  }
+  
+  .error-message {
+    color: red;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: left;
+  }
+  
+  .signup-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    background-color: #FFC0CB;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup-btn:hover {
+    background-color: #FFB6C1;
+  }
+  
+  .already-account p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .already-account p a {
+    color: #FFB6C1;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .already-account p a:hover {
+    text-decoration: underline;
+  }
+  
+  .password-toggle-icon {
+    position: absolute;
+    right: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #888;
+  }
+  
+  .input-container {
+    position: relative;
+  }
+  
+  .input-container input {
+    width: 100%;
+    padding-right: 30px; 
+  }
+  
+/* Loading container to center the spinner on the screen */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: light background */
+}
+
+/* Simple spinner */
+.spinner {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #FFB6C1; /* Blue color */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite; /* Infinite spinning */
+}
+
+/* Loading text */
+.loading-text {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Keyframes for spinner animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+  

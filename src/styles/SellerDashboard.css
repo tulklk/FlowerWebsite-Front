@@ -1,0 +1,130 @@
+/* General reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Sidebar */
+  /* Sidebar container styling */
+  .sidebar-dashboard {
+    background: linear-gradient(135deg, #FFC0CB 0%, #FADADD 100%);
+    color: #2C3E50;
+    width: 250px;
+    height: 100vh;
+    padding: 30px 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  /* Sidebar title styling */
+  .sidebar-dashboard h2 {
+    padding-top: 60px;
+    text-align: center;
+    color: #2C3E50;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+  }
+  
+  /* List styling */
+  .sidebar-dashboard ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+  }
+  
+  /* List item styling */
+  .sidebar-dashboard li {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Link styling */
+  .sidebar-dashboard a {
+    color: #2C3E50;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hover effect for links */
+  .sidebar-dashboard a:hover {
+    background-color: white;
+    color: #2C3E50;
+    transform: translateX(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease-out;
+  }
+  
+  /* Sidebar hover effect */
+  .sidebar-dashboard:hover {
+    width: 270px;
+  }
+  
+  /* Main content */
+  .dashboard-content {
+    margin-left: 270px;
+    padding: 10px;
+    flex-grow: 1;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    min-height: calc(100vh - 60px);
+  }
+  
+  /* Styling for the back button */
+
+.back-to-profile-btn {
+    color: #2C3E50;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* Match background of sidebar links */
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px; /* Spacing from sidebar menu */
+    cursor: pointer;
+    border: none;
+  }
+  
+  /* Hover effect for Back to Profile button */
+  .back-to-profile-btn:hover {
+    background-color: white; /* Same as hover effect for other links */
+    color: #2C3E50;
+    transform: translateX(10px); /* Same as the other buttons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease-out;
+  }
+  
+  
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .sidebar-dashboard {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+  
+    .dashboard-content {
+      margin-left: 0;
+    }
+  }
+  

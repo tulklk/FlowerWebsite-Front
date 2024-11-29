@@ -1,0 +1,161 @@
+/* General reset */
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} */
+
+
+/* Sidebar */
+/* Sidebar container styling */
+.sidebar-profile-page {
+  background: linear-gradient(135deg, #FFC0CB 0%, #FADADD 100%);
+  color: #2C3E50;
+  width: 250px;
+  height: 100vh;
+  padding: 30px 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000; /* Ensure sidebar stays on top */
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition for resizing or interaction */
+}
+
+/* Sidebar title styling */
+.sidebar-profile-page h2 {
+  padding-top: 60px;
+  text-align: center;
+  color: #2C3E50;
+  font-family: 'Poppins', sans-serif; /* Clean, modern font */
+  letter-spacing: 1px;
+}
+
+/* List styling */
+.sidebar-profile-page ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+/* List item styling */
+.sidebar-profile-page li {
+  margin-bottom: 20px; /* Increased spacing for better readability */
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif; /* Clean font for readability */
+  transition: transform 0.3s ease; /* Subtle scaling effect on hover */
+}
+
+/* Link styling */
+.sidebar-profile-page a {
+  color: #2C3E50;
+  text-decoration: none;
+  padding: 12px 20px;
+  display: block;
+  border-radius: 10px; 
+  background-color: rgba(255, 255, 255, 0.2); 
+  transition: all 0.3s ease; 
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for links */
+.sidebar-profile-page a:hover {
+  background-color: white;
+  color: #2C3E50;
+  transform: translateX(10px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+  transition: all 0.4s ease-out; 
+}
+
+/* Sidebar hover effect */
+.sidebar-profile-page:hover {
+  width: 270px; 
+}
+
+/* Main content */
+.profile-content {
+  margin-left: 270px; /* Space for the sidebar */
+  padding: 10px;
+  flex-grow: 1;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  min-height: calc(100vh - 60px); /* Ensure content fits above footer */
+}
+.success-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.profile-submit{
+  background-color: #FFC0CB;
+  color: #2C3E50;
+}
+
+.profile-submit:hover{
+  background-color: #FADADD;
+}
+/* Footer */
+footer {
+  background-color: #8B3A3A;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin-top: auto;
+}
+
+
+/* Loading Spinner */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  flex-direction: column;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #2C3E50;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #2C3E50;
+}
+
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Full width on smaller screens */
+    height: auto;
+    position: relative;
+  }
+
+  .profile-content {
+    margin-left: 0;
+  }
+}

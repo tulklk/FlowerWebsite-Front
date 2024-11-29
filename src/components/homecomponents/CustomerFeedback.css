@@ -1,0 +1,80 @@
+/* src/styles/CustomerFeedback.css */
+
+/* Main container for feedback section */
+.feedback-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  /* Title of the section */
+  .feedback-section h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  /* Each feedback card */
+  .feedback-card {
+    max-width: 345px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Feedback card hover effect */
+  .feedback-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Customer name */
+  .feedback-card .customer-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  
+  /* Customer comment */
+  .feedback-card .customer-comment {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Customer product */
+  .feedback-card .customer-product {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  
+  /* Rating stars */
+  .feedback-card .rating {
+    margin-bottom: 10px;
+  }
+  
+  /* Image of the product inside the feedback card */
+  .feedback-card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  /* Grid layout for feedback cards */
+  .feedback-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .feedback-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

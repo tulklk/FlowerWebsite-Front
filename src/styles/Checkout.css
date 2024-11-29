@@ -1,0 +1,416 @@
+/* Toàn bộ trang Checkout */
+.checkout {
+  font-family: 'Roboto', sans-serif;
+}
+
+.checkout-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.checkout-header h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #9F484C;
+  margin: 30px 0;
+  font-family: 'Playfair Display', serif; 
+  
+}
+
+/* Bố cục 2 cột cho thông tin người dùng và tóm tắt đơn hàng */
+.checkout-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Cột bên trái - Tóm tắt đơn hàng và Thông tin người dùng */
+.order-summary, .user-info {
+  flex: 2;
+}
+
+.order-summary, .user-info {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.order-summary h3,
+.user-info h3 {
+  font-size: 22px;
+  color: #9F484C;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.order-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.order-item-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.order-item span {
+  font-size: 16px;
+  color: #555;
+}
+
+.user-info {
+  margin-top: 10px;
+}
+
+.user-info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-info-tbody .user-info-row {
+  border-bottom: 1px solid #ddd;
+}
+
+.user-info-label {
+  font-weight: bold;
+  color: #9F484C;
+  width: 30%;
+  padding: 10px;
+}
+
+.user-info-value {
+  padding: 10px;
+}
+
+.user-info-input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+
+.address-input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+
+.total-price {
+  text-align: right;
+  margin-top: 15px;
+}
+
+.total-price strong {
+  font-size: 20px;
+  color: black;
+}
+
+/* Cột bên phải - Phương thức thanh toán */
+.payment-method {
+  flex: 1;
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.payment-method h3 {
+  font-size: 22px;
+  color: #9F484C;
+  margin-bottom: 15px;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.payment-options label {
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.payment-options input {
+  margin-right: 10px;
+}
+.payment-options input[type="radio"] {
+  accent-color: #9F484C; /* Áp dụng màu cho radio button */
+}
+
+.checkout-btn {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #9F484C;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #872E32; 
+  transform: scale(1.05); 
+}
+
+
+/* Modal Styles */
+.confirm-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.confirm-modal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.confirm-modal-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.confirm-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.confirm-btn:hover {
+  background-color: #45a049;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cancel-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #264653;
+  color: white;
+  margin-top: 40px;
+  border-radius: 10px;
+}
+
+footer p {
+  font-size: 14px;
+  margin: 0;
+}
+.address-input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.address-input:focus {
+  border-color: #FFC0CB; 
+
+}
+
+.address-input::placeholder {
+  color: #999; 
+  opacity: 0.7;
+}
+
+
+/* Responsive Design */
+/* @media (max-width: 768px) {
+  .checkout-content {
+    flex-direction: column;
+  }
+
+  .checkout-header h2 {
+    font-size: 24px;
+  }
+
+  .order-item span {
+    font-size: 14px;
+  }
+
+  .user-details p {
+    font-size: 14px;
+  }
+} */
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .checkout-content {
+    flex-direction: column;
+  }
+
+  .order-summary, .user-info, .payment-method {
+    flex: 1;
+    margin: 10px 0;
+  }
+
+  .checkout-header h2 {
+    font-size: 24px;
+    margin: 20px 0;
+  }
+
+  .order-item-details span {
+    font-size: 14px;
+  }
+
+  .order-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .user-info-label {
+    font-size: 14px;
+  }
+
+  .total-price strong {
+    font-size: 18px;
+  }
+
+  .payment-method h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .payment-options label {
+    font-size: 14px;
+  }
+
+  .checkout-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout-header h2 {
+    font-size: 22px;
+  }
+
+  .checkout-content {
+    gap: 10px;
+  }
+
+  .order-summary, .user-info, .payment-method {
+    padding: 15px;
+  }
+
+  .order-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-item-details {
+    justify-content: space-between;
+  }
+
+  .order-item span {
+    font-size: 13px;
+  }
+
+  .user-info-label, .user-info-value {
+    font-size: 13px;
+  }
+
+  .payment-method h3 {
+    font-size: 18px;
+  }
+
+  .total-price strong {
+    font-size: 16px;
+  }
+
+  .confirm-modal {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .confirm-modal-buttons button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .checkout-header h2 {
+    font-size: 20px;
+  }
+
+  .checkout-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .confirm-modal {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .confirm-modal-buttons button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+

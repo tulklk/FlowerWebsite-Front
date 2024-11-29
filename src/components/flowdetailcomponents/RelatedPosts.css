@@ -1,0 +1,107 @@
+.related-section {
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.related-section h3 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #2d3e50;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.related-post-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.related-post-card {
+  flex: 1 1 calc(23% - 20px);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.related-post-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.related-post-image {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.related-post-card:hover .related-post-image {
+  transform: scale(1.05);
+}
+
+.related-post-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+
+.related-post-card:hover .related-post-title {
+  color: #FFC0CB;
+}
+
+.related-post-price {
+  font-size: 18px;
+  color: #e74c3c;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.related-post-description {
+  font-size: 15px;
+  margin: 10px 0;
+  color: #555;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.related-post-card {
+  flex: 1 1 calc(23% - 20px);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Align content to the top and bottom */
+  align-items: center;
+}
+
+.related-post-detail {
+  font-size: 15px;
+  color: #3498db;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: auto; /* Pushes the link to the bottom */
+  text-align: center;
+  transition: color 0.3s;
+}
+
+.related-post-detail:hover {
+  color: #1d6fa5;
+}
+

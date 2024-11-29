@@ -1,0 +1,76 @@
+/* Đặt style cho nền mờ phía sau pop-up */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Nền mờ nhẹ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Đảm bảo pop-up ở trên các thành phần khác */
+}
+
+/* Style cho khung pop-up */
+.popup-container {
+  background-color: #fff;
+  /* border-radius: 10px; */
+  padding: 20px;
+  width: 550px; /* Độ rộng vừa phải */
+  max-width: 80vw;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tạo bóng mờ nhẹ */
+  animation: fadeIn 0.5s ease-in-out;
+  position: relative;
+}
+
+/* Biểu tượng xác nhận */
+.popup-icon {
+  font-size: 50px; /* Kích thước lớn hơn cho biểu tượng */
+  color: #28a745; /* Màu xanh lá nổi bật */
+  margin-bottom: 15px;
+}
+
+/* Thông điệp bên trong pop-up */
+.popup-message {
+  font-size: 20px; /* Font lớn hơn */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Nút hành động */
+.popup-button {
+  background-color: #ff6600; /* Màu cam nổi bật */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Đầy chiều ngang */
+}
+
+.popup-button:hover {
+  background-color: #e65c00; /* Đổi màu khi hover */
+}
+.close-button-popup{
+  color: whitesmoke;
+  background-color: #FFC0CB ;
+  
+}
+
+/* Hiệu ứng fade-in cho pop-up */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

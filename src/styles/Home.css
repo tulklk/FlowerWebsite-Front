@@ -1,0 +1,254 @@
+ 
+.home {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  overflow-x: hidden;
+}
+/* Điều chỉnh cho banner */
+.bannerImage {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.text-overlay button:hover {
+  background-color: #e1a628;
+}
+
+/* Điều chỉnh container của header */
+.headerContainer {
+  width: 100%;
+  text-align: center; 
+  padding: 0;
+}
+
+.headerContainer h1 {
+  font-size: 36px; 
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px; 
+}
+
+.headerContainer p {
+  font-size: 18px;
+  font-weight: lighter;
+  color: black;
+  margin-bottom: 20px; /* Tạo khoảng cách dưới đoạn văn */
+}
+
+.headerContainer button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.headerContainer button:hover {
+  transition: 0.3s ease-in;
+}
+
+
+.services {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 300px;
+  background-color: #f4f5f7;
+}
+
+.service {
+  text-align: center;
+  width: 30%;
+}
+
+.service h3 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.newProducts {
+  text-align: center;
+  padding: 50px 300px;
+}
+
+.newProducts h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.productContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.productItem {
+  width: 200px;
+  text-align: center;
+}
+
+.productItem img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.productItem p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+/* Featured Section */
+.about-featured {
+  margin-bottom: 50px;
+  padding: 50px 300px;
+}
+
+.featured-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.featured-banner img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.featured-text {
+  flex: 1;
+}
+
+.featured-text h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.featured-text p {
+  color: #7f8c8d;
+}
+
+.home-button {
+  padding: 10px 20px;
+  background-color: #FFC0CB;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* .home-button:hover {
+  background-color: #FFC0CB;
+} */
+
+/* Blog Section */
+.about-blog {
+  padding: 0 300px;
+}
+
+.blog-posts {
+  display: flex;
+  gap: 40px;
+}
+
+.blog-card {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 500px;
+  
+}
+
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-card h3 {
+  padding: 15px;
+  font-size: 1.4rem;
+}
+
+.blog-card p {
+  padding: 0 15px 15px;
+  color: #7f8c8d;
+}
+
+.blog-card button {
+  margin: 0 15px 15px;
+  padding: 10px 15px;
+  background-color: #FFC0CB;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.blog-card button:hover {
+  background-color: #FFC0CB;
+}
+
+/* Testimonials Section */
+.about-testimonials {
+  margin-bottom: 50px;
+}
+
+.testimonial {
+  text-align: center;
+  font-style: italic;
+  color: #7f8c8d;
+}
+
+.testimonial h4 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #34495e;
+}
+
+
+/* Responsive for mobile screens */
+@media (max-width: 480px) {
+  .headerContainer h1 {
+    font-size: 20px;
+  }
+
+  .headerContainer p {
+    font-size: 12px;
+  }
+
+  .productItem {
+    width: 120px;
+  }
+
+  .newProducts h2 {
+    font-size: 1.3rem;
+  }
+
+  .services {
+    padding: 30px 10px;
+  }
+
+  .service {
+    width: 100%;
+  }
+
+  .about-featured {
+    padding: 20px;
+  }
+
+  .blog-card {
+    width: 100%;
+  }
+
+  .blog-card img {
+    height: 150px;
+  }
+}
+
+
+
+

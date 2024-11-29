@@ -1,0 +1,233 @@
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* height: 125vh; */
+  background-image: url('../assets/backgroundlogin.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+
+.login-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 350px;
+  height: 700px;
+  backdrop-filter: blur(5px); 
+  margin-bottom: 30px;
+  margin-top: 20px;
+  
+
+  
+}
+
+h2 {
+  margin: 10px;
+  font-size: 30px;
+  color: #333;
+  font-weight: bold;
+  
+}
+
+
+.form-input{
+  border: 1px solid #666 ;
+  border-radius: 5px;
+  width: 100%;
+  height: 50px;
+  padding-top: 6px;
+  padding-left: 15px;
+  transition: 0.25s ease;
+  margin-bottom: 15px;
+  font-size: 13px;
+
+}
+.form-input:focus{
+  border-color: #FFC0CB;
+}
+.form-field{
+  position: relative;
+} 
+.form-label {
+ position: absolute;
+ top: 38%;
+ transform: translateY(-100%);
+ left: 21px;
+ user-select: none;
+ color: black;
+ pointer-events: none;
+ transition: 0.25s ease ;
+}
+.form-input:not(:placeholder-shown) + .form-label,
+.form-input:focus + .form-label{
+  top: 0;
+  padding: 0 10px;
+  left: 11px;
+  display: inline-block;
+  background-color: #fff;
+  color: black;
+}
+
+.forgot-password-button {
+  text-align: right;
+  font-size: 14px;
+  color: black;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.forgot-password-button a {
+  color: inherit;
+  text-decoration: none; 
+  transition: color 0.3s ease; 
+}
+
+.forgot-password-button:hover a {
+  color: #FFC0CB; 
+  opacity: 0.9;
+}
+
+
+.login-btn {
+  background: #FFC0CB; 
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 5px 0;
+}
+
+.login-btn:hover {
+  opacity: 0.9;
+}
+
+
+.social-login {
+  margin: 20px 0;
+  color: #777;
+  font-size: 14px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #777;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #FFC0CB;
+  color: white;
+}
+
+.signup-link {
+  margin-top: 9%;
+  font-size: 15px;
+  color: black;
+}
+
+.signup-link a {
+  color: #FFC0CB;
+  text-decoration: none;
+}
+
+.google-login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically if needed */
+  margin-top: 20px; /* Space above the button */
+}
+
+.alternate-login-text {
+  margin-bottom: 5px; /* Space between the text and the button */
+  margin-top: 0;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+  
+}
+
+.password-toggle-icon:hover {
+  color: #555; 
+}
+.recaptcha-container {
+  display: flex;
+  justify-content: center;
+  margin-left: 43px;
+  transform: scale(0.76); 
+  transform-origin: left; 
+}
+.alternate-login-text {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+  text-align: center;
+}
+
+.spinner {
+  border: 8px solid #f3f3f3; /* Light gray */
+  border-top: 8px solid #FFC0CB; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  font-size: 18px;
+  color: #333;
+  margin-top: 20px;
+  font-family: 'Arial', sans-serif;
+}

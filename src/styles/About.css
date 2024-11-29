@@ -1,0 +1,468 @@
+/* About.css */
+.about {
+  overflow-x: hidden;
+  margin: 0 auto;
+  /* padding: 40px 20px; */
+  background-color: white;
+}
+.about-header {
+  text-align: center;
+  padding: 60px 20px;
+  /* background: linear-gradient(to bottom right, #ffc0cb, #ff8a8a); */
+  color: #FFC0CB;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 40px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #34495e;
+}
+
+.about-header strong {
+  color: #FFC0CB;
+}
+.moving-text {
+  overflow: hidden; /* Ẩn phần nội dung tràn ra ngoài */
+  white-space: nowrap; /* Ngăn chặn xuống dòng */
+}
+
+.moving-text h1, .moving-text p {
+  display: inline-block; /* Đảm bảo chúng nằm trên một dòng */
+  position: relative; /* Để tạo hoạt ảnh */
+  animation: moveText 10s linear infinite; /* Tạo hoạt ảnh di chuyển liên tục */
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(-100%); /* Bắt đầu từ ngoài bên trái */
+  }
+  100% {
+    transform: translateX(100%); /* Kết thúc ngoài bên phải */
+  }
+}
+
+
+/* Banner Section */
+.about-banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.banner-text h1 {
+  font-size: 3.5rem; /* Điều chỉnh kích thước tiêu đề */
+  font-weight: 700; /* Tăng độ dày */
+  color: black; /* Màu hồng nhẹ nhàng */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Đổ bóng tạo hiệu ứng nổi */
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif; /* Phong cách cổ điển, tinh tế */
+}
+
+.banner-text p {
+  font-size: 1.2rem;
+  color: black; /* Màu trắng nổi bật trên nền */
+  margin-top: 10px;
+  line-height: 1.5; /* Khoảng cách dòng để dễ đọc hơn */
+  font-family: 'Roboto', sans-serif; /* Font chữ hiện đại, dễ đọc */
+  max-width: 600px; /* Giới hạn độ rộng văn bản để căn giữa */
+  margin-bottom: 25px;
+}
+
+/* Cards Section */
+.about-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.about-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+}
+
+.about-icon {
+  font-size: 3rem;
+  color: #FFC0CB;
+  margin-bottom: 20px;
+}
+
+.about-card h2 {
+  font-size: 1.6rem;
+  color: #34495e;
+}
+
+.about-card p {
+  color: #7f8c8d;
+}
+
+/* Featured Section */
+.about-featured {
+  margin-bottom: 50px;
+}
+
+.featured-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.featured-banner img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.featured-text {
+  flex: 1;
+}
+
+.featured-text h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.featured-text p {
+  color: #7f8c8d;
+}
+
+.featured-text button {
+  padding: 10px 20px;
+  background-color: #FFC0CB;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.featured-text button:hover {
+  background-color: #841e53;
+}
+
+/* Blog Section */
+.about-blog {
+  margin-bottom: 50px;
+}
+
+.blog-posts {
+  display: flex;
+  gap: 40px;
+}
+
+.blog-card {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-card h3 {
+  padding: 15px;
+  font-size: 1.4rem;
+}
+
+.blog-card p {
+  padding: 0 15px 15px;
+  color: #7f8c8d;
+}
+
+.blog-card button {
+  margin: 0 15px 15px;
+  padding: 10px 15px;
+  background-color: #FFC0CB;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.blog-card button:hover {
+  background-color: #FFC0CB;
+}
+
+/* Testimonials Section */
+.about-testimonials {
+  margin-bottom: 50px;
+}
+
+.testimonial {
+  text-align: center;
+  font-style: italic;
+  color: #7f8c8d;
+}
+
+.testimonial h4 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #34495e;
+}
+/* .mission-vision {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+} */
+
+.mission-vision h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.mission,
+.vision {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.mission img,
+.vision img {
+  width: 120px; /* Adjust based on the desired size */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mission-content,
+.vision-content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.mission-icon,
+.vision-icon {
+  font-size: 1.5em;
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.mission p,
+.vision p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #555;
+}
+
+/*Bản đồ */
+.map-section {
+  padding: 2rem;
+  background-color: #f9f9f9; /* Light background color for contrast */
+  text-align: center;
+}
+
+.map-section h2 {
+  font-size: 1.8rem;
+  color: #333; /* Darker color for text */
+  margin-bottom: 1rem;
+}
+
+/* Map container styling */
+.map-container {
+  position: relative;
+  max-width: 1000px; /* Optional max-width to prevent map from being too wide */
+  margin: 0 auto; /* Centers the map */
+  border-radius: 8px;
+  overflow: hidden; /* Rounds map corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+}
+
+.map-container iframe {
+  border: none; /* Removes default iframe border */
+  width: 100%; /* Makes map responsive */
+  height: 500px; /* Fixed height */
+}
+
+/* Responsive adjustments */
+/* General adjustments for mobile responsiveness */
+@media (max-width: 768px) {
+  /* General layout */
+  .about {
+    padding: 20px 10px;
+  }
+
+  /* About Header */
+  .about-header {
+    padding: 40px 10px;
+    margin: 20px 0;
+  }
+
+  .about-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+
+  .about-header p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  /* Banner Section */
+  .about-banner {
+    height: 300px;
+  }
+
+  .banner-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .banner-text p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  /* Cards Section */
+  .about-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-card {
+    padding: 20px;
+  }
+
+  /* Featured Section */
+  .featured-banner {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .featured-banner img {
+    width: 100%;
+    height: auto;
+  }
+
+  .featured-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .featured-text p {
+    font-size: 1rem;
+  }
+
+  .featured-text button {
+    padding: 8px 16px;
+  }
+
+  /* Blog Section */
+  .blog-posts {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .blog-card img {
+    height: 180px;
+  }
+
+  .blog-card h3 {
+    font-size: 1.2rem;
+  }
+
+  /* Testimonials Section */
+  .testimonial h4 {
+    font-size: 1rem;
+  }
+
+  /* Mission & Vision Section */
+  .mission,
+  .vision {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mission img,
+  .vision img {
+    width: 100px;
+  }
+
+  .mission-content,
+  .vision-content {
+    text-align: center;
+  }
+
+  /* Map Section */
+  .map-section {
+    padding: 1rem;
+  }
+
+  .map-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .map-container {
+    width: 100%;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+.footer{
+  width: 100%;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  left: 0;
+
+}

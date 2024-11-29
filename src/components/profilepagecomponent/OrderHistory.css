@@ -1,0 +1,349 @@
+
+.order-info{
+  margin-top: 30px;
+  text-align: center;
+}
+.order-history {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+h2{
+  text-align: center;
+  margin-top: 5px;
+}
+.order-history-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Luôn hiển thị 2 cột */
+  gap: 20px; /* Khoảng cách giữa các đơn hàng */
+}
+
+/* Style cho mỗi order item */
+.order-item {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.orders-history{
+  text-align: center;
+}
+.orders-history h3 {
+  font-weight: bold;
+  font-size: 30px;
+}
+.order-details h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+}
+
+.order-total {
+  font-weight: bold;
+  color: #4caf50;
+  margin: 8px 0;
+  text-align: center;
+}
+
+.view-details {
+  margin-top: 20px;
+  padding: 8px 16px;
+  background-color: #FFC0CB;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+.view-details:hover {
+  background-color: #FFC0CB;
+}
+
+
+/* Modal overlay for displaying selected order details */
+.order-detail {
+  position: fixed;
+  top: 50%;
+  left: 57%;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 90%;
+  height: 70%;
+  max-width: 800px;
+  background-color: #fff;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  z-index: 1000;
+  overflow-y: auto;
+  max-height: 80%;
+  transition: transform 0.3s ease;
+  animation: fadeIn 0.3s forwards;
+}
+
+.order-detail.open {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Close button */
+.order-detail .close-btn {
+  float: right;
+  margin-left: 6px;
+  font-size: 34px;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.2s ease;
+}
+
+.order-detail .close-btn:hover {
+  color: #333;
+}
+
+/* Tabs for navigating between sections */
+.order-detail .tab-menu {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.order-detail .tab-menu button {
+  flex: 1;
+  padding: 12px 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.order-detail .tab-menu button.active {
+  color: #4caf50;
+  border-bottom: 3px solid #4caf50;
+}
+.order-history-title {
+ color: #4caf50;
+ text-align: center;
+ font-size: 35px;
+ margin-bottom: 30px;
+}
+p {
+  font-size: 23px;
+  /* margin-top: 25px; */
+}
+
+.order-info-table {
+  /* margin-top: 10px; */
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.order-info-table tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.order-info-table tr:last-child {
+  border-bottom: none;
+}
+
+.order-info-table td {
+  padding: 12px 16px;
+}
+
+.order-info-table .label {
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #f8f9fa;
+  color: #333;
+  text-align: left;
+  width: 40%; 
+}
+
+.order-info-table .value {
+  color: #555;
+  text-align: left;
+  width: 60%;
+  font-size: 20px;
+}
+
+.order-info-table .order-id-row td,
+.order-info-table .total-price-row td {
+  color: #2c3e50;
+}
+
+.order-info-table .total-price-row .value {
+  color: #d9534f; /* màu đỏ nổi bật cho tổng cộng */
+  font-weight: bold;
+}
+
+
+
+
+.order-info-table tr:nth-child(even) .label {
+  background-color: #e9ecef; /* Màu nền xen kẽ cho hàng chẵn */
+}
+.order-history-title{
+  margin-top: 10px;
+  text-align: center;
+}
+.tab-content {
+  display: none;
+}
+.order-history-deli{
+  margin-top: 50px;
+  text-align: center;
+  font-size: 28px;
+}
+.tab-content.active {
+  display: block;
+  animation: fadeSlideIn 0.3s ease;
+}
+/* CSS cho bản chi tiết hoa */
+.flower-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.flower-detail-table thead {
+  background-color: #4caf50;
+}
+
+.flower-detail-table th,
+.flower-detail-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-size: 20px;
+}
+
+.flower-detail-table th {
+  font-weight: bold;
+  color: #333;
+}
+
+.flower-detail-table .flower-name,
+.flower-detail-table .flower-type {
+  text-align: left;
+  padding-left: 16px;
+}
+
+.flower-detail-table .flower-quantity,
+.flower-detail-table .flower-unit-price,
+.flower-detail-table .flower-total-price {
+  color: #d9534f; 
+  font-weight: bold;
+}
+
+/* .flower-detail-row:nth-child(even) {
+  background-color: #f9f9f9; 
+} */
+
+/* .flower-detail-row:hover {
+  background-color: #f1f1f1; 
+  transition: background-color 0.3s ease;
+} */
+.review-button {
+  margin-top: 20%;
+  margin-left: 29%;
+  background-color: #4CAF50; /* Màu nền xanh lá */
+  color: white; /* Màu chữ trắng */
+  padding: 10px 20px; /* Khoảng đệm trong */
+  font-size: 20px; /* Kích thước chữ */
+  font-weight: bold; /* Độ đậm của chữ */
+  border: none; /* Loại bỏ viền mặc định */
+  border-radius: 8px; /* Bo góc */
+  cursor: pointer; /* Con trỏ chuột chỉ tay */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Bóng mờ */
+  transition: all 0.3s ease; /* Hiệu ứng chuyển động */
+}
+
+.review-button:hover {
+  background-color: #45a049; /* Màu nền khi hover */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* Tăng độ đậm của bóng mờ */
+}
+
+.review-button:active {
+  background-color: #3e8e41; /* Màu khi nút được nhấn */
+  transform: translateY(2px); /* Hiệu ứng nhấn xuống */
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/*Responesive cho mobile*/
+@media (max-width: 768px) {
+  .flower-detail-table th,
+  .flower-detail-table td {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Overlay background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  opacity: 0;
+  animation: overlayFadeIn 0.3s forwards;
+}
+
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,57 @@
+.about-introduction {
+    margin: 50px 0;
+    text-align: center;
+  }
+  
+  .about-introduction h2 {
+    font-size: 36px;
+    color: #2d3e50;
+    margin-bottom: 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .introduction-slide {
+    background: linear-gradient(135deg, #FFC0CB 0%, #fad0c4 100%);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 900px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .introduction-slide:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  .introduction-slide p {
+    font-size: 20px;
+    color: #2d3e50;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  .introduction-slide h4 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-top: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  /* Tạo hiệu ứng nổi bật với animation cho dấu chấm carousel */
+  .slick-dots li button:before {
+    font-size: 12px;
+    color: #ff9a9e;
+    transition: all 0.3s ease;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #fad0c4;
+    font-size: 16px;
+  }
+  
+  

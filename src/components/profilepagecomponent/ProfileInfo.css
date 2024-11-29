@@ -1,0 +1,65 @@
+/* Reset some default margins and paddings */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  } */
+
+ 
+  
+  .profile-info-component h2 {
+    position: relative;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+  
+  /* Styling for the form and labels */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  
+  .name, .mail, .pass, .phone, .address {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+    font-size: 15px;
+  }
+  
+  .name:focus,
+  .mail:focus, .pass:focus, .phone:focus, .address:focus  {
+    border-color: #FFC0CB;
+    outline: none;
+    box-shadow: 0 0 5px #FFC0CB;
+  }
+  
+  
+  /* Mobile responsive */
+  @media (max-width: 600px) {
+    .profile-info-component {
+      padding: 15px;
+      margin: 20px;
+    }
+  
+    button[type="profile-submit"] {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  
+
+  

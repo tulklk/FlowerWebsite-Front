@@ -1,0 +1,70 @@
+/* CreatePostComponent.css */
+.create-post-component {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .create-post-component h2 {
+    text-align: center;
+    margin: 10px;
+    color: #333;
+  }
+  
+  .create-post-component form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .create-post-component form input,
+  .create-post-component form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  .create-post-component form input[type="file"] {
+    padding: 5px;
+  }
+  
+  .create-post-component form textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  .create-post-component form button {
+    width: 100%;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .create-post-component form button:hover {
+    background-color: #FFC0CB;
+  }
+  
+  .create-post-component .error-message {
+    color: #f44336;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .create-post-component .success-message-post {
+    color: #f44336;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  

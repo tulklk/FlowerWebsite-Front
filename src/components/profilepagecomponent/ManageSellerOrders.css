@@ -1,0 +1,269 @@
+/* ManageSellerOrders.css */
+
+/* Container */
+/* .seller-orders-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  } */
+  
+  /* Title */
+  .orders-title {
+    text-align: center;
+    font-size: 30px;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  
+  /* Loading Animation */
+  .loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .loader-spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #FFC0CB;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loader-text {
+    color: #666;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Order List */
+  .orders-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .order-card {
+    flex: 1 1 calc(50% - 0.5rem); /* Each order card takes up 50% of the container width, minus the gap */
+    padding-bottom: 20px;
+    /* background-color: #ffffff; */
+    border: 2px solid #FFC0CB;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .order-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .order-info h3 {
+    margin: 0;
+    font-size: 30px;
+    color: #333;
+  }
+  
+  .order-info p {
+    margin: 4px 0;
+    color: #4d4d4d;
+  }
+  
+  .order-status-text {
+    font-weight: bold;
+    color: #27ae60;
+  }
+  
+  .details-button,
+  .mark-delivered-button {
+    margin-top: 8px;
+    padding: 10px 14px;
+    background-color: #FFC0CB;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+    margin-right: 10px;
+  }
+  
+  .mark-delivered-button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+  }
+  
+  .details-button:hover,
+  .mark-delivered-button:hover:not(:disabled) {
+    background-color: #FFC0CB;
+  }
+  
+  .error-text {
+    color: #e74c3c;
+    text-align: center;
+  }
+  
+  /* Modal Overlay */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Modal Window */
+  .order-modal {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    position: fixed;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+    animation: fadeInScale 0.3s ease-out forwards; /* Apply the animation */
+}
+
+/* Fade-In and Scale Animation */
+@keyframes fadeInScale {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+  
+  .modal-title {
+    color: #2c3e50;
+    margin-top: 0;
+    font-size: 2rem;
+    color: #FFC0CB ;
+    font-style: bold;
+  }
+  
+  .order-modal p {
+    color: #4d4d4d;
+    margin: 8px 0;
+  }
+  
+  .product-details {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+  }
+  
+  .close-modal-button {
+    position: absolute;
+    top: 12px;
+    right: 11px;
+    font-size: 22px;
+    color: #7f8c8d;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-left: 5px;
+  }
+  
+  .close-modal-button:hover {
+    color: #333;
+  }
+  
+  /* Tab Navigation */
+  .modal-tabs {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 16px;
+  }
+  
+  .tab-button {
+    flex: 1;
+    padding: 12px;
+    background: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .tab-button.active {
+    background: #ffffff;
+    color: black;
+    border-bottom: 2px solid #FFC0CB;
+  }
+  
+  .tab-button:hover:not(.active) {
+    background: #e0e0e0;
+  }
+  
+  .order-details-content,
+  .product-details-content {
+    padding: 16px;
+    font-size: 0.95rem;
+  }
+  /*nút xác nhận đã giao hàng*/
+  .delivery-details-content{
+    padding: 5px 10px;
+  }
+
+  .update-status-button {
+    background-color: #FFC0CB; 
+    color: white; 
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 35%;
+    
+  }
+  
+  .update-status-button:hover {
+    background-color: #FFC0CB; /* Màu nền khi di chuột qua */
+    transform: translateY(-2px); /* Hiệu ứng nổi lên nhẹ */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Hiệu ứng bóng khi di chuột qua */
+  }
+  
+  .update-status-button:active {
+    background-color: #FFC0CB; /* Màu nền khi nhấn */
+    transform: translateY(1px); /* Hiệu ứng khi nhấn xuống */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .update-status-button:disabled {
+    background-color: #cccccc; /* Màu nền khi nút bị vô hiệu */
+    color: #666666; /* Màu chữ khi nút bị vô hiệu */
+    cursor: not-allowed; /* Đổi con trỏ khi nút bị vô hiệu */
+    box-shadow: none; /* Không có bóng */
+    margin-top: 10px;
+    margin-left: 260px;
+  }
+  
+  

@@ -1,0 +1,70 @@
+.about-blog {
+  padding: 20px;
+ 
+}
+
+.blog-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+  margin: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  min-height: 300px; /* Đảm bảo các bài blog có chiều cao tối thiểu bằng nhau */
+  position: relative;
+}
+
+.blog-card h3 {
+  font-size: 1.5rem;
+  /* margin-bottom: 10px; */
+}
+.blog-card h3{
+  text-align: center;
+}
+/* .blog-card p {
+  flex-grow: 1;
+  margin-bottom: 20px;
+} */
+
+.button-blog {
+  position: absolute;
+  bottom: 20px; /* Align button 20px from the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust centering */
+  padding: 10px 20px; /* Slightly increase padding */
+  font-size: 1rem;
+  background-color: #FF6B6B;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.button-blog:hover {
+  background-color: #FF4B4B; /* Darker shade on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  transform: translateX(-50%) translateY(-3px); /* Slightly lift button on hover */
+}
+
+.button-blog:active {
+  background-color: #E63946; /* Even darker shade when clicked */
+  transform: translateX(-50%) translateY(1px); /* Simulate button press */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adjust shadow when pressed */
+}
+
+.blog-card:hover {
+  transform: translateY(-5px); /* Lift the blog card slightly on hover */
+}
+

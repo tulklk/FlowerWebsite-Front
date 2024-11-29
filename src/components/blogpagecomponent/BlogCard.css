@@ -1,0 +1,34 @@
+.blog-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .blog-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  
+  .blog-card p {
+    font-size: 1em;
+    color: #555;
+  }
+  
+  .button-blog {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button-blog:hover {
+    background-color: #218838;
+  }
+  

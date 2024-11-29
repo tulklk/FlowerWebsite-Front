@@ -1,0 +1,81 @@
+
+/* Form Title */
+.change-info-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #333;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Success/Error Messages */
+.success-message, .error-message {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+/* Form Styles */
+.change-info-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.change-info-form label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #495057;
+    font-weight: 500;
+}
+
+.change-info-form input {
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.change-info-form input:focus {
+    border-color: #FFC0CB;
+    outline: none;
+    box-shadow: 0 0 10px#FFC0CB;
+}
+
+/* Button Styles */
+.change-info-form button {
+    padding: 14px;
+    font-size: 17px;
+    background: linear-gradient(135deg, #FFC0CB, #FFC0CB);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 600;
+}
+
+.change-info-form button:hover {
+    background: linear-gradient(135deg, #FFC0CB, #FFC0CB);
+    box-shadow: 0 5px 15px rgba(0, 91, 187, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .change-info-container {
+        padding: 20px;
+    }
+
+    .change-info-form input {
+        font-size: 16px;
+    }
+
+    .change-info-form button {
+        font-size: 18px;
+    }
+}
